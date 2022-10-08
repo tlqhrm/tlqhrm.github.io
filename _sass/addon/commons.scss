@@ -1687,3 +1687,10 @@ $sidebar-display: "sidebar-display";
     } /* .sidebar-bottom */
   } /* #sidebar */
 } /* min-width: 1650px */
+#sidebar .category {
+  margin: 1em 0 0.2em 1em;
+  font-size: 1.4em;
+  display: inline-block;
+  // text-decoration: underline;
+  border-bottom: 0.25em solid lightgrey;
+}
