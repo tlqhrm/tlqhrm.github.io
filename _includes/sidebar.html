@@ -78,19 +78,22 @@
     </li>
     <!-- the real tabs -->
     {% for tab in site.tabs %}
-    
-    <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
-      <a href="{{ tab.url | relative_url }}" class="nav-link">
-        <i class="fa-fw {{ tab.icon }} ml-xl-3 mr-xl-3 unloaded"></i>
-        {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
+      {%- if tab.title == 'About' -%}
+      <br>
+      <span class="category">ABOUT ME</span>
+      {%- else -%}
+      <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
+        <a href="{{ tab.url | relative_url }}" class="nav-link">
+          <i class="fa-fw {{ tab.icon }} ml-xl-3 mr-xl-3 unloaded"></i>
+          {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
 
-        <span>{{ site.data.locales[lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
-      </a>
-    </li> <!-- .nav-items -->
-    {%- if tab.title == 'Archives' -%}
-    <br>
-    <span class="category">ABOUT ME</span>
-    {%- endif -%}
+          <span>{{ site.data.locales[lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
+        </a>
+      </li> <!-- .nav-items -->
+      {%- endif -%}
+    
+    
+    
     {% endfor %}
 
   </ul> <!-- ul.nav.flex-column -->
