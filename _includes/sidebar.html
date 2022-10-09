@@ -79,8 +79,8 @@
     <!-- the real tabs -->
     {% for tab in site.tabs %}
       {% if tab.title == 'About' %}
-      <br>
-      <span class="category">ABOUT ME</span>
+      
+      <li class="category">ABOUT ME</li>
       {% else %}
       <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
         <a href="{{ tab.url | relative_url }}" class="nav-link">
