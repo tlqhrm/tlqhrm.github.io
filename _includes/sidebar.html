@@ -87,10 +87,10 @@
         <span>{{ site.data.locales[lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
       </a>
     </li> <!-- .nav-item -->
-    {% if tab.title == 'Archives' %}
+    <!-- {%- if tab.title == 'Archives' -%}
     <br>
     <span class="category">ABOUT ME</span>
-    {% endif %}
+    {%- endif -%} -->
     {% endfor %}
 
   </ul> <!-- ul.nav.flex-column -->
