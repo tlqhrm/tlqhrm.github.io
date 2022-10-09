@@ -40,12 +40,12 @@ github:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: 김지훈
+  name: 159
   email: tlqhrm@naver.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your twitter homepage
-    - https://github.com/username # change to your github homepage
+    # - https://twitter.com/username # change to your twitter homepage
+    - https://github.com/tlqhrm # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -80,10 +80,10 @@ theme_mode: # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: "https://cdn.jsdelivr.net/gh/tlqhrm/tlqhrm.github.io"
+img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "/tEUU6f1evz9Y-_port.jpg"
+avatar: "/GN4bD6aKEYAl-_port.jpg"
 
 # boolean type, the global switch for ToC in posts.
 toc: true
