@@ -1,0 +1,10 @@
+a= input()
+b= input()
+
+b3_a = int(b[2:3]) * int(a)
+b2_a = int(b[1:2]) * int(a)
+b1_a = int(b[0:1]) * int(a)
+print(b3_a)
+print(b2_a)
+print(b1_a)
+print(b3_a + (b2_a * 10) + (b1_a * 100))
