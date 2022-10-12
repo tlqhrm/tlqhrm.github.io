@@ -1,5 +1,5 @@
 ---
-layout: archives2
+layout: skill
 icon: fas fa-cogs
 order: 6
 ---
