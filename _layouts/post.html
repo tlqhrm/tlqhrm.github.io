@@ -117,7 +117,7 @@ tail_includes:
 
   <div
     class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"
-    style="border-bottom: 1px solid; color: black"
+    style="border-bottom: 1px solid;"
   >
     <div class="license-wrapper">
       {% if site.data.locales[lang].copyright.license.template %} {% capture
@@ -134,11 +134,25 @@ tail_includes:
   <!-- .post-tail-bottom -->
 </div>
 <!-- div.post-tail-wrapper -->
-<script
-  src="https://utteranc.es/client.js"
-  repo="tlqhrm/tlqhrm.github.io"
-  issue-term="pathname"
-  theme="github-light"
-  crossorigin="anonymous"
-  async
-></script>
+
+<div class="comments">
+    <script>
+        // load utteranc comment
+        let html = document.querySelector('html');
+        var getTheme = html.dataset['mode'];
+        getTheme = getTheme == null ? 'light' : getTheme;
+
+        let theme = getTheme === 'dark' ? 'github-dark' : 'github-light';
+        let s = document.createElement('script');
+        s.src = 'https://utteranc.es/client.js';
+        s.setAttribute('repo', 'tlqhrm/tlqhrm.github.io');
+        s.setAttribute('issue-term', 'title');
+        s.setAttribute('theme', theme);
+        s.setAttribute('crossorigin', 'anonymous');
+        s.setAttribute('async', '');
+        document.querySelector('div.comments').innerHTML = '';
+        document.querySelector('div.comments').appendChild(s);
+    </script>
+</div>
+
+

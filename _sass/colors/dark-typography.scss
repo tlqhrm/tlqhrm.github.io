@@ -10,7 +10,7 @@
   --main-border-color: rgb(44, 45, 45);
 
   /* Common color */
-  --text-color: white;
+  --text-color: rgb(255 255 255 / 80%);
   --text-muted-color: rgb(107, 116, 124);
   --heading-color: #cccccc;
   --blockquote-border-color: rgb(66, 66, 66);
@@ -43,7 +43,7 @@
   --input-focus-border-color: rgb(112, 114, 115);
 
   /* Home page */
-  --post-list-text-color: white;
+  --post-list-text-color: rgb(255 255 255 / 80%);;
   --btn-patinator-text-color: var(--text-color);
   --btn-paginator-hover-color: rgb(64, 65, 66);
   --btn-paginator-border-color: var(--btn-border-color);
@@ -92,7 +92,7 @@
   /* categories */
   --categories-border: rgb(64, 66, 69);
   --categories-hover-bg: rgb(73, 75, 76);
-  --categories-icon-hover-color: white;
+  --categories-icon-hover-color: rgb(255 255 255 / 80%);;
 
   /* archives */
   --timeline-node-bg: rgb(150, 152, 156);

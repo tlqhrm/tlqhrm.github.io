@@ -732,8 +732,8 @@ $sidebar-display: "sidebar-display";
   .nav-item {
     // text-align: center;
     display: table;
-    height: $tab-height;
-    margin-left: 2em;
+    // height: $tab-height;
+    margin-left: 2rem;
 
     &.active {
       .nav-link {
@@ -803,7 +803,7 @@ $sidebar-display: "sidebar-display";
   } /* ul */
 
   .sidebar-bottom {
-    margin-bottom: 2.1rem;
+    // margin-bottom: 2.1rem;
 
     @include ml-mr(auto);
     @include pl-pr(1rem);
@@ -1691,8 +1691,9 @@ $sidebar-display: "sidebar-display";
 } /* min-width: 1650px */
 #sidebar .category {
   width: auto;
-  margin: 1em 0 0.2em 1.5em;
   font-size: 1.7em;
+  margin-top: 1em;
   display: inline-block;
-  border-bottom: 0.25em solid #daaff7;
+  border-bottom: 0.25em solid #d4b5ea;
+  padding: 0;
 }

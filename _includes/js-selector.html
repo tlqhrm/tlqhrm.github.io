@@ -26,6 +26,7 @@
 {% if page.layout == 'home'
     or page.layout == 'post'
     or page.layout == 'archives'
+    or page.layout == 'achives'
     or page.layout == 'category'
     or page.layout == 'tag' %}
 
@@ -52,6 +53,7 @@
     or page.layout == 'page' %}
   {% assign type = page.layout %}
 {% elsif page.layout == 'archives'
+or page.layout == 'achives'
     or page.layout == 'category'
     or page.layout == 'tag' %}
   {% assign type = "misc" %}

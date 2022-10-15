@@ -16,7 +16,7 @@ layout: page
 <div id="archives" class="pl-xl-3">
 
 {% for post in site.posts %}
-{% unless post.categories contains "백준" or post.categories contains "프로그래머스" or post.categories contains "SWEA" %}
+{% if post.categories contains "백준" or post.categories contains "프로그래머스" or post.categories contains "SWEA" %}
   {% capture cur_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 
   {% if cur_year != last_year %}
@@ -37,7 +37,7 @@ layout: page
   </li>
 
   {% if forloop.last %}</ul>{% endif %}
-  {% endunless %}
+  {% endif %}
 {% endfor %}
 
 </div>

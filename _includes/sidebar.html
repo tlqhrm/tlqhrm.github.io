@@ -68,19 +68,22 @@
   <ul class="w-100">
 
     <!-- home -->
-    <br>
-    <span class="category">POST</span>
+    
     <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
-      <a href="{{ '/' | relative_url }}" class="nav-link">
-        <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
+      <a href="{{ '/' | relative_url }}" class="nav-link category">
+        <!-- <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> -->
         <span>{{ site.data.locales[lang].tabs.home | upcase }}</span>
       </a>
     </li>
+    <!-- <span class="category">POST</span> -->
     <!-- the real tabs -->
     {% for tab in site.tabs %}
-      {% if tab.title == 'About' %}
-      
-      <li class="category">ABOUT ME</li>
+      {% if tab.title == 'About'%}
+      <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %} category">ABOUT</li>
+      {% elsif tab.title == 'Algorithm' %}
+      <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %} category">ALGORITHM</li>
+      {% elsif tab.title == 'Post' %}
+      <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %} category">POST</li>
       {% else %}
       <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
         <a href="{{ tab.url | relative_url }}" class="nav-link">
