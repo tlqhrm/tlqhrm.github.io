@@ -21,7 +21,6 @@ tags: ['#utterances']
 ```html
 <div class="comments">
     <script>
-        // load utteranc comment
         let html = document.querySelector('html');
         var getTheme = html.dataset['mode'];
         getTheme = getTheme == null ? 'light' : getTheme;
