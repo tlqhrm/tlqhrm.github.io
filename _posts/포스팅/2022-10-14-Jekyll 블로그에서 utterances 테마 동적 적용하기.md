@@ -41,5 +41,5 @@ tags: ['#utterances']
 <br>
 라이트/다크 모드를 변경할 때 즉시 변경되지 않고 변경 후 다음 게시물에 접근할 때 설정된 테마에 맞게 적용됩니다.
 
-[참조](https://github.com/utterance/utterances/issues/549#issuecomment-1075835596 "참조")
+[참조 - https://github.com/utterance/utterances/issues/549#issuecomment-1075835596](https://github.com/utterance/utterances/issues/549#issuecomment-1075835596 "참조")
 
