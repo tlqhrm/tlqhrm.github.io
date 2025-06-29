@@ -5,55 +5,66 @@
 
 <body class="chat-layout">
 
-  <!-- 프로필 모달 -->
-  <div id="profileModal" class="modal">
-    <div class="modal-content profile-modal">
-      <div class="profile-header">
-        <div class="profile-avatar-large"></div>
-        <h2>김지훈</h2>
-        <p class="profile-title">백엔드 개발자</p>
-<!--        <p class="profile-company">에스지알소프트</p>-->
+  <!-- 텔레그램 스타일 프로필 모달 -->
+  <div id="profileModal" class="tg-modal">
+    <div class="tg-modal-overlay"></div>
+    <div class="tg-profile-card">
+      <div class="tg-profile-header">
+        <div class="tg-avatar">
+          <img src="/images/face2.jpeg" alt="Profile" class="tg-avatar-img">
+          <div class="tg-online-status"></div>
+        </div>
+        <h3 class="tg-profile-name">김지훈</h3>
+        <p class="tg-profile-status">백엔드 개발자</p>
+        <p class="tg-last-seen">온라인</p>
       </div>
-      <div class="profile-body">
-        <div class="profile-info">
-          <div class="profile-item">
-            <span class="profile-label">경력</span>
-            <span class="profile-value">2년 3개월</span>
+      
+      <div class="tg-profile-info">
+        <div class="tg-info-item">
+          <div class="tg-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+              <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+            </svg>
           </div>
-          <div class="profile-item">
-            <span class="profile-label">전문분야</span>
-            <span class="profile-value">백엔드, DevOps , 미디어</span>
+          <div class="tg-info-content">
+            <div class="tg-info-label">경력</div>
+            <div class="tg-info-value">3년차</div>
           </div>
         </div>
-        <div class="profile-links">
-          <a href="mailto:wjstls123@gmail.com" class="profile-link-item">
-            <span class="profile-link-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-            <span class="profile-link-text">이메일</span>
-          </a>
-          <a href="tel:+82-10-2052-7109" class="profile-link-item">
-            <span class="profile-link-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-            <span class="profile-link-text">전화</span>
-          </a>
-          <a href="https://github.com/tlqhrm" target="_blank" class="profile-link-item">
-            <span class="profile-link-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-            <span class="profile-link-text">GitHub</span>
-          </a>
+        
+        <div class="tg-info-item">
+          <div class="tg-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <polyline points="16,18 22,12 16,6" stroke="currentColor" stroke-width="2"/>
+              <polyline points="8,6 2,12 8,18" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="tg-info-content">
+            <div class="tg-info-label">전문분야</div>
+            <div class="tg-info-value">백엔드, DevOps, 미디어</div>
+          </div>
         </div>
-        <button id="closeProfile" class="close-profile-btn">닫기</button>
       </div>
+      
+      <div class="tg-contact-actions">
+        <a href="mailto:wjstls123@gmail.com" class="tg-action-btn tg-email-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+            <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          <span>이메일</span>
+        </a>
+        
+        <a href="https://github.com/tlqhrm" target="_blank" class="tg-action-btn tg-github-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+      
+      <button id="closeProfile" class="tg-close-btn">닫기</button>
     </div>
   </div>
 
@@ -242,7 +253,7 @@
             const avatar = document.createElement('div');
             avatar.className = 'avatar profile-avatar clickable-avatar';
             avatar.addEventListener('click', function() {
-              document.getElementById('profileModal').style.display = 'flex';
+              document.getElementById('profileModal').style.display = 'block';
             });
             avatarContainer.appendChild(avatar);
           }
@@ -527,7 +538,7 @@
           const avatar = document.createElement('div');
           avatar.className = 'avatar profile-avatar clickable-avatar';
           avatar.addEventListener('click', function() {
-            document.getElementById('profileModal').style.display = 'flex';
+            document.getElementById('profileModal').style.display = 'block';
           });
           avatarContainer.appendChild(avatar);
 
@@ -851,11 +862,9 @@
         document.getElementById('profileModal').style.display = 'none';
       });
 
-      // 모달 외부 클릭 시 닫기
-      document.getElementById('profileModal').addEventListener('click', function(e) {
-        if (e.target === this) {
-          this.style.display = 'none';
-        }
+      // 모달 오버레이 클릭 시 닫기
+      document.querySelector('.tg-modal-overlay').addEventListener('click', function() {
+        document.getElementById('profileModal').style.display = 'none';
       });
     }
 
