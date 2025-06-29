@@ -1,0 +1,28 @@
+# Site settings
+title: "개발자 김지훈 포트폴리오"
+email: wjstls123@gmail.com
+description: >-
+  백엔드 개발자 김지훈의 포트폴리오 웹사이트
+baseurl: "/portfolio-qna"
+url: "https://YOUR_USERNAME.github.io"
+twitter_username: 
+github_username: tlqhrm
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - Dockerfile
+  - docker-compose.yml
+  - README.md
