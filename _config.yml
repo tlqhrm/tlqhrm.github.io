@@ -14,6 +14,9 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Google Analytics
+google_analytics: G-9ZDFGSJ4TZ
+
 # Exclude from processing
 exclude:
   - Gemfile
