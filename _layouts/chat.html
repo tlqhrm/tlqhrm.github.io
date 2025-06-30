@@ -384,6 +384,9 @@
       const chatInput = document.getElementById('chatInput');
       const sendButton = document.getElementById('sendButton');
 
+      // 대화형 모드에서 사용자가 처음 스크롤하면 첫 번째 질문 표시
+      hasUserScrolledInChatMode = true;
+
       // 첫 번째 질문 바로 입력
       chatInput.value = questions[0];
       chatInput.disabled = false;
@@ -506,6 +509,12 @@
     }
 
     let scrollInputDisabled = false;
+    let hasUserScrolledInChatMode = false;
+    let chatModeState = {
+      visibleSections: [],
+      currentSectionIndex: 0,
+      hasUserScrolled: false
+    };
 
     function disableScrollInput() {
       scrollInputDisabled = true;
@@ -651,6 +660,13 @@
 
           // 다음 섹션이 화면에 보이면 (또는 곧 보일 위치에 있으면)
           if (rect.top <= containerRect.bottom + 200) {
+            // 대화형 모드에서 사용자가 스크롤하지 않았으면 질문 표시하지 않음
+            if (!hasUserScrolledInChatMode) {
+              chatInput.disabled = true;
+              sendButton.disabled = true;
+              return;
+            }
+
             // 바로 질문 입력
             chatInput.value = questions[currentSectionIndex];
             chatInput.disabled = false;
@@ -741,10 +757,20 @@
           return;
         }
 
+        // 대화형 모드에서 사용자가 스크롤했음을 기록
+        if (document.body.classList.contains('chat-mode')) {
+          hasUserScrolledInChatMode = true;
+        }
+
         checkScrollPosition();
 
         // 입력창이 비활성화되어 있고 아직 입력된 질문이 없다면
         if (chatInput.disabled && !chatInput.value && currentSectionIndex < questions.length) {
+          // 대화형 모드에서 사용자가 스크롤하지 않았으면 질문 표시하지 않음
+          if (!hasUserScrolledInChatMode) {
+            return;
+          }
+
           const sections = document.querySelectorAll('.chat-section');
           const nextSection = sections[currentSectionIndex];
 
@@ -1246,6 +1272,19 @@
     }
 
     function enterPdfMode() {
+      // 대화형 모드의 현재 상태 저장
+      chatModeState.visibleSections = [];
+      document.querySelectorAll('.chat-section').forEach(section => {
+        if (section.style.display !== 'none') {
+          chatModeState.visibleSections.push(section.id);
+        }
+      });
+      chatModeState.currentSectionIndex = currentSectionIndex;
+      chatModeState.hasUserScrolled = hasUserScrolledInChatMode;
+
+      // 대화형 모드 스크롤 추적 리셋
+      hasUserScrolledInChatMode = false;
+
       // 모든 섹션 표시
       const sections = document.querySelectorAll('.chat-section');
       sections.forEach(section => {
@@ -1264,20 +1303,9 @@
     }
 
     function restoreChatMode() {
-      // 현재 표시된 섹션들을 저장
-      const visibleSections = [];
-      document.querySelectorAll('.chat-section').forEach(section => {
-        if (section.style.display !== 'none') {
-          visibleSections.push(section.id);
-        }
-      });
-
-      // 현재 표시된 질문들을 저장
-      const visibleQuestions = [];
-      document.querySelectorAll('.question').forEach((question, index) => {
-        if (question.style.display !== 'none') {
-          visibleQuestions.push(index);
-        }
+      // PDF 모드에서 추가된 모든 show 클래스 제거
+      document.querySelectorAll('.question.show, .answer.show').forEach(element => {
+        element.classList.remove('show');
       });
 
       // 종료 메시지 숨기기
@@ -1287,26 +1315,36 @@
         endMessage.classList.remove('show');
       }
 
-      // 저장된 섹션들 복원
+      // 모든 섹션 숨기기
       hideAllSections();
-      visibleSections.forEach(sectionId => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-          section.style.display = 'block';
-        }
-      });
 
-      // 저장된 질문들 복원
-      document.querySelectorAll('.question').forEach((question, index) => {
-        if (visibleQuestions.includes(index)) {
-          question.style.display = 'flex';
-        }
-      });
+      // 저장된 상태에서 표시되었던 섹션들만 복원
+      if (chatModeState.visibleSections.length > 0) {
+        chatModeState.visibleSections.forEach(sectionId => {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            section.style.display = 'block';
+            
+            // 해당 섹션의 질문과 답변에 show 클래스 다시 추가
+            const questions = section.querySelectorAll('.question');
+            const answers = section.querySelectorAll('.answer');
+            questions.forEach(q => q.classList.add('show'));
+            answers.forEach(a => a.classList.add('show'));
+          }
+        });
+      }
+
+      // 저장된 인덱스와 스크롤 상태 복원
+      currentSectionIndex = chatModeState.currentSectionIndex;
+      hasUserScrolledInChatMode = chatModeState.hasUserScrolled;
 
       // 현재 활성 섹션 유지
       const currentSection = document.querySelector('.nav-item.active')?.getAttribute('data-section') || 'intro';
       updateActiveNavItem(currentSection);
       updateBreadcrumb(currentSection);
+
+      // 입력창 상태 업데이트
+      updateInputForSection();
 
       // 스크롤 위치 복원
       const targetElement = document.getElementById(currentSection);
