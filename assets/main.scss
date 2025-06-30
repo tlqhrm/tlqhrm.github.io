@@ -2366,6 +2366,10 @@
   margin: 20px 0 16px 0 !important;
   padding-left: 12px !important;
   position: relative !important;
+  background: none !important;
+  -webkit-text-fill-color: #1a472a !important;
+  background-clip: unset !important;
+  -webkit-background-clip: unset !important;
 }
 
 .pdf-mode .message h4.company-name::before {
