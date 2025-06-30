@@ -21,9 +21,7 @@ subtitle: "2"
     <div class="message">
       <h3>자기소개</h3>
 <br/>
-      <h4>안녕하세요!</h4>
-      <p>스타트업에서 근무하며 다양한 서비스를 경험 했습니다. 백엔드 리드로서 항상 서비스의 기획 단계부터 참여했으며 인프라 구축, DB설계, 비즈니스 로직 등 모든 백엔드 업무를 담당했습니다. 작은 조직의 특성상 하나의 역할에 머무르지 않고 서비스 전반을 직접 설계하고 운영하며 빠르게 성장할 수 있었습니다.</p>
-<br/>
+
       
       <!-- 기본 정보 카드 -->
       <div class="info-card-grid">
@@ -110,13 +108,15 @@ subtitle: "2"
           </div>
         </div>
       </div>
-      <br/><br/>
-      <p><strong>긍정적인 사고</strong>로 업무에 임합니다. 주 업무가 아닌 영역을 맡게 되면 새로운 경험을 쌓을 기회로, 잘 모르는 기능을 개발할 때는 공부하고 성장할 기회로 바라봅니다.</p>
-<br/>
-<p><strong>적극적인 참여</strong>로 팀에 기여합니다. 팀의 일원으로서 다양한 의견을 내며 서비스가 더 나은 방향으로 갈 수 있는 가능성을 제시합니다.</p>
-<br/>
-      <p><strong>서비스 전체를 이해하는 시각</strong>을 가장 중요하게 생각합니다. 기획 의도와 프론트 레이어에서 어떻게 보여질지 정확히 이해하고 기능을 설계합니다.</p>
-<br/>
+      <br/>
+      <h4>안녕하세요!</h4>
+      <p>저는 스타트업에서 근무하며 다양한 서비스를 직접 경험해왔습니다. 백엔드 리드로서 항상 서비스의 기획 단계부터 참여해 인프라 구축, DB 설계, 비즈니스 로직 등 백엔드 전반을 책임졌습니다. 작은 조직의 특성상 하나의 역할에 머무르지 않고 서비스 전반을 직접 설계하고 운영하며 빠르게 성장할 수 있었습니다.</p>
+      <ul style="margin: 16px 0; color: #666; font-size: 15px; line-height: 1.6;">
+        <li style="margin-bottom: 12px;">항상 긍정적인 태도로 업무에 임합니다. 주 업무가 아니더라도 새로운 영역은 경험을 쌓을 기회로 삼고, 잘 모르는 기능은 배우고 성장할 기회로 생각합니다.</li>
+        <li style="margin-bottom: 12px;">적극적으로 참여하며 팀에 기여합니다. 팀의 일원으로서 제 의견을 적극적으로 공유하고, 함께 더 나은 방향을 찾기 위해 고민합니다.</li>
+        <li>서비스 전체를 이해하는 시각을 중요하게 생각합니다. 기획 의도를 정확히 파악하고, 사용자의 입장에서 기능을 설계합니다.</li>
+      </ul>
+      <br/>
     </div>
   </div>
 </div>
@@ -134,8 +134,19 @@ subtitle: "2"
       
       <!-- 기술 스택 목록 -->
       <div style="margin-top: 24px;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 20px;">
-          <div style="display: flex; align-items: flex-start; padding: 16px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+        <style>
+          @media (max-width: 768px) {
+            .tech-grid {
+              grid-template-columns: 1fr !important;
+              gap: 16px !important;
+            }
+            .tech-card {
+              padding: 12px !important;
+            }
+          }
+        </style>
+        <div class="tech-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 20px;">
+          <div class="tech-card" style="display: flex; align-items: flex-start; padding: 16px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
             <div style="margin-right: 12px; color: #2980b9; margin-top: 2px;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <polyline points="16,18 22,12 16,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -152,7 +163,7 @@ subtitle: "2"
             </div>
           </div>
           
-          <div style="display: flex; align-items: flex-start; padding: 16px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+          <div class="tech-card" style="display: flex; align-items: flex-start; padding: 16px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
             <div style="margin-right: 12px; color: #2980b9; margin-top: 2px;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <ellipse cx="12" cy="5" rx="9" ry="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -172,8 +183,8 @@ subtitle: "2"
           </div>
         </div>
         
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-          <div style="display: flex; align-items: flex-start; padding: 16px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+        <div class="tech-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+          <div class="tech-card" style="display: flex; align-items: flex-start; padding: 16px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
             <div style="margin-right: 12px; color: #2980b9; margin-top: 2px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-container-icon lucide-container"><path d="M22 7.7c0-.6-.4-1.2-.8-1.5l-6.3-3.9a1.72 1.72 0 0 0-1.7 0l-10.3 6c-.5.2-.9.8-.9 1.4v6.6c0 .5.4 1.2.8 1.5l6.3 3.9a1.72 1.72 0 0 0 1.7 0l10.3-6c.5-.3.9-1 .9-1.5Z"/><path d="M10 21.9V14L2.1 9.1"/><path d="m10 14 11.9-6.9"/><path d="M14 19.8v-8.1"/><path d="M18 17.5V9.4"/></svg>
             </div>
@@ -188,7 +199,7 @@ subtitle: "2"
             </div>
           </div>
           
-          <div style="display: flex; align-items: flex-start; padding: 16px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+          <div class="tech-card" style="display: flex; align-items: flex-start; padding: 16px; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
             <div style="margin-right: 12px; color: #2980b9; margin-top: 2px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-icon lucide-book-open"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
             </div>
@@ -575,13 +586,15 @@ subtitle: "2"
          
         </div>
       </div>
+      
     </div>
   </div>
 </div>
 
 <div class="system-message" id="end-message" style="display: none;">
   <div class="system-content">
-    <span>감사합니다. 좋은 하루 되세요</span>
+    <span>감사합니다. 좋은 하루 되세요 😊</span>
   </div>
 </div>
+
 

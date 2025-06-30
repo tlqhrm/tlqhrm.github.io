@@ -120,8 +120,6 @@
             <div class="header-title">
               <h1 id="headerTitle">{{ page.title | default: "Developer Portfolio" }}</h1>
               <div class="breadcrumb" id="breadcrumb" style="display: none;">
-                <span class="breadcrumb-title">{{ page.title | default: "Developer Portfolio" }}</span>
-                <span class="breadcrumb-separator"> > </span>
                 <span class="breadcrumb-current" id="currentSection">자기소개</span>
               </div>
             </div>
@@ -416,6 +414,16 @@
       }, 50);
     }
 
+    function showEndMessage() {
+      const endMessage = document.getElementById('end-message');
+      if (endMessage) {
+        endMessage.style.display = 'block';
+        setTimeout(() => {
+          endMessage.classList.add('show');
+        }, 100);
+      }
+    }
+
     function sendMessage() {
       const chatInput = document.getElementById('chatInput');
       const sendButton = document.getElementById('sendButton');
@@ -606,22 +614,6 @@
       }
     }
 
-    function showEndMessage() {
-      const endMessage = document.getElementById('end-message');
-      if (endMessage) {
-        endMessage.style.display = 'block';
-        setTimeout(() => {
-          endMessage.classList.add('show');
-          // 종료 메시지로 스크롤
-          setTimeout(() => {
-            endMessage.scrollIntoView({
-              behavior: 'smooth',
-              block: 'center'
-            });
-          }, 300);
-        }, 100);
-      }
-    }
 
     function prepareNextQuestion() {
       const chatInput = document.getElementById('chatInput');
@@ -1158,7 +1150,7 @@
       }
 
       if (sectionId && sectionNames[sectionId]) {
-        // 첫 번째 섹션이 아니면 breadcrumb 표시
+        // 첫 번째 섹션이 아니면 섹션 이름만 표시
         if (sectionId !== 'intro') {
           headerTitle.style.display = 'none';
           breadcrumb.style.display = 'flex';
@@ -1263,8 +1255,6 @@
         answers.forEach(a => a.classList.add('show'));
       });
 
-      // PDF 모드에서는 종료 메시지 표시
-      showEndMessage();
 
       // 페이지 상단으로 스크롤
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1280,6 +1270,7 @@
         endMessage.style.display = 'none';
         endMessage.classList.remove('show');
       }
+
 
       // 현재 진행상황 복원
       const currentSection = document.querySelector('.nav-item.active')?.getAttribute('data-section') || 'intro';

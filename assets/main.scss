@@ -226,6 +226,21 @@
   margin-left: 8px;
 }
 
+/* Hide PDF download button on mobile */
+@media (max-width: 768px) {
+  .pdf-download {
+    display: none !important;
+  }
+
+  #pdfDownload {
+    display: none !important;
+  }
+
+  .download-btn {
+    display: none !important;
+  }
+}
+
 .download-btn {
   display: flex;
   align-items: center;
@@ -419,7 +434,6 @@
   display: flex;
   align-items: center;
   padding-top: 8px;
-  border-top: 1px solid rgba(0, 0, 0, 0.05); /* 미묘한 구분선 */
 }
 
 .breadcrumb-title {
@@ -433,7 +447,8 @@
 
 .breadcrumb-current {
   color: #1a1a1a; /* 소제목과 통일된 검정색 */
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .chat-subtitle {
@@ -2120,24 +2135,24 @@
     flex-direction: column;
     gap: 16px;
   }
-  
+
   .project-image {
     flex: none;
     width: 100%;
   }
-  
+
   .image-gallery {
     height: 180px;
   }
-  
+
   .modal-nav.prev {
     left: -60px;
   }
-  
+
   .modal-nav.next {
     right: -60px;
   }
-  
+
   .modal-close {
     top: -40px;
     right: 0;
@@ -2183,7 +2198,7 @@
   .system-message {
     margin: 16px 0;
   }
-  
+
   .system-content {
     font-size: 13px;
     padding: 7px 14px;
@@ -2462,15 +2477,15 @@
     max-width: none !important;
     margin: 0 !important;
   }
-  
+
   .pdf-mode .chat-header {
     padding: 10px 40px !important;
   }
-  
+
   .pdf-mode .header-right {
     display: none !important;
   }
-  
+
   .pdf-mode .message h3 {
     font-size: 20px !important;
   }
@@ -2482,17 +2497,17 @@
   .pdf-mode .message h4.company-name {
     font-size: 18px !important;
   }
-  
+
   .pdf-mode .message p,
   .pdf-mode .message li {
     font-size: 12px !important;
   }
-  
+
   .pdf-mode .info-card-grid {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 12px !important;
   }
-  
+
   .pdf-mode .info-card {
     padding: 8px !important;
   }
