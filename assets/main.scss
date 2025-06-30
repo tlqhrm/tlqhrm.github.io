@@ -226,7 +226,7 @@
   margin-left: 8px;
 }
 
-/* Hide PDF download button on mobile */
+/* Hide PDF download button and toggle on mobile */
 @media (max-width: 768px) {
   .pdf-download {
     display: none !important;
@@ -237,6 +237,14 @@
   }
 
   .download-btn {
+    display: none !important;
+  }
+  
+  .mode-toggle {
+    display: none !important;
+  }
+  
+  .toggle-container {
     display: none !important;
   }
 }
