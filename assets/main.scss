@@ -239,13 +239,30 @@
   .download-btn {
     display: none !important;
   }
-  
+
   .mode-toggle {
     display: none !important;
   }
-  
+
   .toggle-container {
     display: none !important;
+  }
+
+  /* 모바일에서 질문 메시지 오른쪽 끝까지 */
+  .question .message {
+    max-width: 100% !important;
+    margin-right: 0 !important;
+  }
+
+  .question {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 채팅 메시지 컨테이너 패딩 최소화 */
+  .chat-messages {
+    padding-left: 12px !important;
+    padding-right: 4px !important;
   }
 }
 
