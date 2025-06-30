@@ -276,6 +276,16 @@
     padding-left: 12px !important;
     padding-right: 4px !important;
   }
+
+  /* 모바일에서 채팅 메시지 옆 프로필 이미지 숨기기 */
+  .avatar-container {
+    display: none !important;
+  }
+
+  /* 모바일에서 메시지 더 넓게 */
+  .message {
+    max-width: 95% !important;
+  }
 }
 
 .download-btn {
