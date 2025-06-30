@@ -1143,9 +1143,10 @@
       const headerTitle = document.getElementById('headerTitle');
       const breadcrumb = document.getElementById('breadcrumb');
       const currentSection = document.getElementById('currentSection');
+      const chatHeader = document.querySelector('.chat-header');
 
       // 요소들이 존재하는지 확인
-      if (!headerTitle || !breadcrumb || !currentSection) {
+      if (!headerTitle || !breadcrumb || !currentSection || !chatHeader) {
         return;
       }
 
@@ -1155,10 +1156,12 @@
           headerTitle.style.display = 'none';
           breadcrumb.style.display = 'flex';
           currentSection.textContent = sectionNames[sectionId];
+          chatHeader.classList.add('compact'); // 헤더 크기 축소
         } else {
           // 첫 번째 섹션이면 원래 타이틀 표시
           headerTitle.style.display = 'block';
           breadcrumb.style.display = 'none';
+          chatHeader.classList.remove('compact'); // 헤더 크기 복원
         }
       }
     }
@@ -1261,8 +1264,21 @@
     }
 
     function restoreChatMode() {
-      // 초기 상태로 복원
-      hideAllSections();
+      // 현재 표시된 섹션들을 저장
+      const visibleSections = [];
+      document.querySelectorAll('.chat-section').forEach(section => {
+        if (section.style.display !== 'none') {
+          visibleSections.push(section.id);
+        }
+      });
+
+      // 현재 표시된 질문들을 저장
+      const visibleQuestions = [];
+      document.querySelectorAll('.question').forEach((question, index) => {
+        if (question.style.display !== 'none') {
+          visibleQuestions.push(index);
+        }
+      });
 
       // 종료 메시지 숨기기
       const endMessage = document.getElementById('end-message');
@@ -1271,10 +1287,26 @@
         endMessage.classList.remove('show');
       }
 
+      // 저장된 섹션들 복원
+      hideAllSections();
+      visibleSections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.style.display = 'block';
+        }
+      });
 
-      // 현재 진행상황 복원
+      // 저장된 질문들 복원
+      document.querySelectorAll('.question').forEach((question, index) => {
+        if (visibleQuestions.includes(index)) {
+          question.style.display = 'flex';
+        }
+      });
+
+      // 현재 활성 섹션 유지
       const currentSection = document.querySelector('.nav-item.active')?.getAttribute('data-section') || 'intro';
-      showSectionsUpTo(currentSection);
+      updateActiveNavItem(currentSection);
+      updateBreadcrumb(currentSection);
 
       // 스크롤 위치 복원
       const targetElement = document.getElementById(currentSection);

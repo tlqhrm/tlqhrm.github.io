@@ -192,6 +192,18 @@
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* 더 강한 그림자 */
+  transition: padding 0.2s ease;
+}
+
+/* 섹션 표시 시 헤더 크기 축소 */
+.chat-header.compact {
+  padding: 8px 20px;
+}
+
+/* breadcrumb이 보일 때 더 컴팩트하게 */
+.chat-header.compact .breadcrumb {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Header Left Section */
