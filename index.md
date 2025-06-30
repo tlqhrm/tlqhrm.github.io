@@ -109,13 +109,21 @@ subtitle: "2"
         </div>
       </div>
       <br/>
-      <h4>안녕하세요!</h4>
-      <p>저는 스타트업에서 근무하며 다양한 서비스를 직접 경험해왔습니다. 백엔드 리드로서 항상 서비스의 기획 단계부터 참여해 인프라 구축, DB 설계, 비즈니스 로직 등 백엔드 전반을 책임졌습니다. 작은 조직의 특성상 하나의 역할에 머무르지 않고 서비스 전반을 직접 설계하고 운영하며 빠르게 성장할 수 있었습니다.</p>
-      <ul style="margin: 16px 0; color: #666; font-size: 15px; line-height: 1.6;">
-        <li style="margin-bottom: 12px;">항상 긍정적인 태도로 업무에 임합니다. 주 업무가 아니더라도 새로운 영역은 경험을 쌓을 기회로 삼고, 잘 모르는 기능은 배우고 성장할 기회로 생각합니다.</li>
-        <li style="margin-bottom: 12px;">적극적으로 참여하며 팀에 기여합니다. 팀의 일원으로서 제 의견을 적극적으로 공유하고, 함께 더 나은 방향을 찾기 위해 고민합니다.</li>
-        <li>서비스 전체를 이해하는 시각을 중요하게 생각합니다. 기획 의도를 정확히 파악하고, 사용자의 입장에서 기능을 설계합니다.</li>
-      </ul>
+      
+      <!-- 자기소개 텍스트 -->
+      <div style="background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 12px; padding: 24px; margin: 20px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);">
+        <h4 style="margin: 0 0 20px 0; color: #2980b9; font-size: 18px; font-weight: 600; letter-spacing: -0.3px;">안녕하세요!</h4>
+        <p style="margin: 0 0 24px 0; color: #333; font-size: 16px; line-height: 1.75; font-weight: 500; letter-spacing: -0.2px;">저는 스타트업에서 근무하며 다양한 서비스를 직접 경험해왔습니다. 백엔드 리드로서 항상 서비스의 기획 단계부터 참여해 인프라 구축, DB 설계, 비즈니스 로직 등 백엔드 전반을 책임졌습니다. 작은 조직의 특성상 하나의 역할에 머무르지 않고 서비스 전반을 직접 설계하고 운영하며 빠르게 성장할 수 있었습니다.</p>
+        
+        <!-- 구분선 -->
+        <div style="border-bottom: 1px solid rgba(41, 128, 185, 0.15); margin: 20px 0;"></div>
+        
+        <p style="margin: 0 0 16px 0; color: #666; font-size: 15px; line-height: 1.7; letter-spacing: -0.2px;">새로운 일을 맡으면 부담보다는 배우고 해결할 기회라고 생각합니다. 모르는 영역이라도 스스로 공부해 구현하고, 필요하다면 주 업무가 아니어도 팀에 필요한 일이라면 참여합니다.</p>
+        
+        <p style="margin: 0 0 16px 0; color: #666; font-size: 15px; line-height: 1.7; letter-spacing: -0.2px;">팀 안에서는 혼자 결정하기보다는 제 의견을 적극적으로 공유하고 다른 의견과 조율해 더 나은 방법을 찾으려고 합니다.</p>
+        
+        <p style="margin: 0; color: #666; font-size: 15px; line-height: 1.7; letter-spacing: -0.2px;">무엇보다 기획 의도를 제대로 파악하고, 사용자가 실제로 어떻게 쓰게 될지 생각하며 기능을 설계합니다. 기능 하나하나가 서비스 전체 흐름에 맞아야 한다고 생각합니다.</p>
+      </div>
       <br/>
     </div>
   </div>
@@ -511,6 +519,23 @@ subtitle: "2"
               <!-- 이미지 갤러리 컨테이너 -->
               <div class="image-container">
                 <img src="./images/yamegame1.png" alt="야매게임 메인 화면" class="clickable-image" data-index="0" />
+              </div>
+              <!-- 이미지가 여러 개일 때 표시되는 네비게이션 버튼들 -->
+              <div class="gallery-nav" style="display: none;">
+                <button class="gallery-btn prev-btn" type="button">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15,18 9,12 15,6"></polyline>
+                  </svg>
+                </button>
+                <button class="gallery-btn next-btn" type="button">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9,18 15,12 9,6"></polyline>
+                  </svg>
+                </button>
+              </div>
+              <!-- 이미지 인디케이터 -->
+              <div class="gallery-indicators" style="display: none;">
+                <span class="indicator active"></span>
               </div>
             </div>
           </div>
