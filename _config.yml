@@ -19,9 +19,8 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-asd
 # Google Analytics
-google_analytics:asd
+google_analytics: G-JK9RF0BJ6Z
 
 # Exclude from processing
 exclude:
