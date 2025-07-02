@@ -459,9 +459,9 @@ subtitle: "2"
             <div class="image-gallery">
               <!-- 이미지 갤러리 컨테이너 -->
               <div class="image-container">
-                <img src="./images/tapplace1.png" alt="TapPlace 메인 화면" class="clickable-image" data-index="0" />
-                <img src="./images/tapplace2.png" alt="TapPlace 검색 화면" class="clickable-image" data-index="1" />
-                <img src="./images/tapplace3.png" alt="TapPlace 상세 화면" class="clickable-image" data-index="2" />
+                <img src="./images/tapplace1.png" alt="TapPlace 간편결제 매장 찾기 서비스 메인 화면" class="clickable-image" data-index="0" />
+                <img src="./images/tapplace2.png" alt="TapPlace 위치 기반 매장 검색 결과 화면" class="clickable-image" data-index="1" />
+                <img src="./images/tapplace3.png" alt="TapPlace 매장 상세 정보 및 결제 방법 안내 화면" class="clickable-image" data-index="2" />
               </div>
               <!-- 이미지가 여러 개일 때 표시되는 네비게이션 버튼들 -->
               <div class="gallery-nav" style="display: none;">
@@ -518,7 +518,7 @@ subtitle: "2"
             <div class="image-gallery">
               <!-- 이미지 갤러리 컨테이너 -->
               <div class="image-container">
-                <img src="./images/yamegame1.png" alt="야매게임 메인 화면" class="clickable-image" data-index="0" />
+                <img src="./images/yamegame1.png" alt="야매게임 고전 콘솔게임 웹 에뮬레이터 메인 화면" class="clickable-image" data-index="0" />
               </div>
               <!-- 이미지가 여러 개일 때 표시되는 네비게이션 버튼들 -->
               <div class="gallery-nav" style="display: none;">

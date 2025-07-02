@@ -2,20 +2,26 @@
 title: "개발자 김지훈 포트폴리오"
 email: wjstls123@gmail.com
 description: >-
-  백엔드 개발자 김지훈의 포트폴리오 웹사이트
+  3년차 백엔드 개발자 김지훈의 포트폴리오입니다. Node.js, Golang을 사용한 서버 개발과 AWS, Kubernetes 기반 인프라 구축 경험을 보유하고 있습니다.
 baseurl: ""
 url: "https://tlqhrm.github.io"
 twitter_username:
 github_username: tlqhrm
+
+# SEO 설정
+author: "김지훈"
+lang: "ko"
+keywords: "백엔드 개발자, 포트폴리오, Node.js, Golang, AWS, Kubernetes, 김지훈"
+og_image: "/images/face2.jpeg"
 
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-
+asd
 # Google Analytics
-google_analytics: G-9ZDFGSJ4TZ
+google_analytics:asd
 
 # Exclude from processing
 exclude:
