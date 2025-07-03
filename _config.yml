@@ -20,7 +20,7 @@ theme: minima
 plugins:
   - jekyll-feed
 # Google Analytics
-google_analytics: G-JK9RF0BJ6Z
+google_analytics: G-XDF7Q9NC93
 
 # Exclude from processing
 exclude:

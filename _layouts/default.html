@@ -15,6 +15,27 @@
 
   {%- include footer.html -%}
 
+  <script>
+    (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const timestampParam = urlParams.get('t');
+      const currentTime = Math.floor(Date.now() / 1000);
+      
+      if (!timestampParam) {
+        // t 파라미터가 없으면 현재 시간으로 리다이렉트
+        window.location.replace(window.location.pathname + '?t=' + currentTime);
+      } else {
+        const paramTime = parseInt(timestampParam);
+        const timeDiff = Math.abs(currentTime - paramTime);
+        
+        // 10분(600초) 이상 차이나면 최신 타임스탬프로 리다이렉트
+        if (timeDiff > 600) {
+          window.location.replace(window.location.pathname + '?t=' + currentTime);
+        }
+      }
+    })();
+  </script>
+
 </body>
 
 </html>
