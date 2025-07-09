@@ -164,7 +164,7 @@ subtitle: "2"
             <div>
               <div style="color: #2980b9; font-weight: 600; margin-bottom: 8px;">백엔드</div>
               <div style="line-height: 1.6;">
-                <div>• Node.js (Nest.js)</div>
+                <div>• Node.js (Nest.js, Nuxt.js)</div>
                 <div>• Golang (Gin)</div>
               </div>
             </div>
@@ -314,7 +314,6 @@ subtitle: "2"
             <li>백엔드 담당자로 주간 회의에 참여하여 신규 기능 기획 및 유지보수 항목을 협의</li>
             <li>플레이어에서 사용자 시청 행동을 분석하는 시스템을 개발하고, 데이터를 조합하여 통계로 제공</li>
             <li>클라우드 서비스 운영을 위한 보안 컴플라이언스 적용 및 문서 작성</li>
-            <li>쿠키 기반 세션 환경에서 Redis를 활용한 중복 로그인 불가 기능 구현</li>  
             <li>Email, OTP를 활용한 2차 인증 기능 구현 </li>
           </ul>
           <div style="display: flex; flex-wrap: wrap; gap: 6px;">
@@ -322,6 +321,27 @@ subtitle: "2"
             <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#클라우드 서비스</span>
             <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#보안 컴플라이언스</span>
             <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#커뮤니케이션</span>
+          </div>
+          
+          <!-- 기술 스택 -->
+          <div style="margin-top: 16px; padding: 12px; background: rgba(248, 249, 250, 0.9); border: 1px solid rgba(0,0,0,0.06); border-radius: 8px;">
+            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-right: 6px;">
+                <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" fill="#6c757d" opacity="0.8"/>
+                <path d="M12 8L8 10V14L12 16L16 14V10L12 8Z" fill="#6c757d"/>
+              </svg>
+              <span style="color: #6c757d; font-size: 13px; font-weight: 600;">기술 스택</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Node.js</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Nuxt.js</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Go</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">PostgreSql</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Redis</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">NCP</span>
+                              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Kafka</span>
+
+            </div>
           </div>
         </div>
       </div>
@@ -352,6 +372,24 @@ subtitle: "2"
             <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#관리자 페이지</span>
             <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#통계 기능</span>
           </div>
+          
+          <!-- 기술 스택 -->
+          <div style="margin-top: 16px; padding: 12px; background: rgba(248, 249, 250, 0.9); border: 1px solid rgba(0,0,0,0.06); border-radius: 8px;">
+            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-right: 6px;">
+                <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" fill="#6c757d" opacity="0.8"/>
+                <path d="M12 8L8 10V14L12 16L16 14V10L12 8Z" fill="#6c757d"/>
+              </svg>
+              <span style="color: #6c757d; font-size: 13px; font-weight: 600;">기술 스택</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Node.js</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Nuxt.js</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">MySQL</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">NCP</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Redis</span>
+            </div>
+          </div>
         </div>
         
         <!-- 쇼츠24 카드 -->
@@ -375,6 +413,23 @@ subtitle: "2"
             <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#과금 시스템</span>
             <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#크레딧 관리</span>
           </div>
+          
+          <!-- 기술 스택 -->
+          <div style="margin-top: 16px; padding: 12px; background: rgba(248, 249, 250, 0.9); border: 1px solid rgba(0,0,0,0.06); border-radius: 8px;">
+            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-right: 6px;">
+                <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" fill="#6c757d" opacity="0.8"/>
+                <path d="M12 8L8 10V14L12 16L16 14V10L12 8Z" fill="#6c757d"/>
+              </svg>
+              <span style="color: #6c757d; font-size: 13px; font-weight: 600;">기술 스택</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Node.js</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Nuxt.js</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">MySQL</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">NCP</span>
+            </div>
+          </div>
         </div>
         
         <!-- 라이브24 카드 -->
@@ -397,6 +452,27 @@ subtitle: "2"
             <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#라이브 커머스</span>
             <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#Web Push</span>
             <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#챗봇</span>
+          </div>
+          
+          <!-- 기술 스택 -->
+          <div style="margin-top: 16px; padding: 12px; background: rgba(248, 249, 250, 0.9); border: 1px solid rgba(0,0,0,0.06); border-radius: 8px;">
+            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-right: 6px;">
+                <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" fill="#6c757d" opacity="0.8"/>
+                <path d="M12 8L8 10V14L12 16L16 14V10L12 8Z" fill="#6c757d"/>
+              </svg>
+              <span style="color: #6c757d; font-size: 13px; font-weight: 600;">기술 스택</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Node.js</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Vue.js</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Go</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">MySQL</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">NCP</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Firestore</span>
+              <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">PHP</span>
+
+            </div>
           </div>
         </div>
       </div>
@@ -439,10 +515,27 @@ subtitle: "2"
             </ul>
             <div style="display: flex; flex-wrap: wrap; gap: 6px;">
                             <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#팀 프로젝트</span>
-
               <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#웹 크롤링</span>
               <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#공간 인덱스</span>
               <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#위치 기반 서비스</span>
+            </div>
+            
+            <!-- 기술 스택 -->
+            <div style="margin-top: 16px; padding: 12px; background: rgba(248, 249, 250, 0.9); border: 1px solid rgba(0,0,0,0.06); border-radius: 8px;">
+              <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-right: 6px;">
+                  <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" fill="#6c757d" opacity="0.8"/>
+                  <path d="M12 8L8 10V14L12 16L16 14V10L12 8Z" fill="#6c757d"/>
+                </svg>
+                <span style="color: #6c757d; font-size: 13px; font-weight: 600;">기술 스택</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Node.js</span>
+                <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Nest.js</span>
+                <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">TypeORM</span>
+                <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">MySQL</span>
+                <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Oracle Cloud</span>
+              </div>
             </div>
             <div style="margin-top: 12px;">
               <a href="https://github.com/TapPlace" target="_blank" style="color: #2980b9; text-decoration: none; font-size: 13px;">
@@ -505,11 +598,27 @@ subtitle: "2"
             </ul>
             <div style="display: flex; flex-wrap: wrap; gap: 6px;">
               <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#개인 프로젝트</span>
-<span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#고전게임</span>
-
+              <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#고전게임</span>
               <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#EmulatorJs</span>
               <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#OAuth2.0</span>
-
+            </div>
+            
+            <!-- 기술 스택 -->
+            <div style="margin-top: 16px; padding: 12px; background: rgba(248, 249, 250, 0.9); border: 1px solid rgba(0,0,0,0.06); border-radius: 8px;">
+              <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-right: 6px;">
+                  <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" fill="#6c757d" opacity="0.8"/>
+                  <path d="M12 8L8 10V14L12 16L16 14V10L12 8Z" fill="#6c757d"/>
+                </svg>
+                <span style="color: #6c757d; font-size: 13px; font-weight: 600;">기술 스택</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Node.js</span>
+                <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Express.js</span>
+                <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Vue.js</span>
+                <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">MySQL</span>
+                <span style="background: rgba(41,128,185,0.08); color: #2980b9; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500;">Oracle CLoud</span>
+              </div>
             </div>
           </div>
           <div class="project-image">
