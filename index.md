@@ -113,7 +113,7 @@ subtitle: "2"
       <!-- 자기소개 텍스트 -->
       <div style="background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 12px; padding: 24px; margin: 20px 0; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);">
         <h4 style="margin: 0 0 20px 0; color: #2980b9; font-size: 18px; font-weight: 600; letter-spacing: -0.3px;">안녕하세요!</h4>
-        <p style="margin: 0 0 24px 0; color: #333; font-size: 16px; line-height: 1.75; font-weight: 500; letter-spacing: -0.2px;">스타트업에서 근무하며 다양한 서비스를 직접 경험해왔습니다. 백엔드 리드로서 항상 서비스의 기획 단계부터 참여해 인프라 구축, DB 설계, 비즈니스 로직 등 백엔드 전반을 책임졌습니다. 작은 조직의 특성상 하나의 역할에 머무르지 않고 서비스 전반을 직접 설계하고 운영하며 빠르게 성장할 수 있었습니다.</p>
+        <p style="margin: 0 0 24px 0; color: #333; font-size: 16px; line-height: 1.75; font-weight: 500; letter-spacing: -0.2px;">스타트업에서 근무하며 다양한 서비스를 직접 경험해왔습니다. 서비스의 기획 단계부터 참여해 인프라 구축, DB 설계, 비즈니스 로직 등 백엔드 전반을 책임졌습니다. 작은 조직의 특성상 하나의 역할에 머무르지 않고 서비스 전반을 직접 설계하고 운영하며 빠르게 성장할 수 있었습니다.</p>
         
         <!-- 구분선 -->
         <div style="border-bottom: 1px solid rgba(41, 128, 185, 0.15); margin: 20px 0;"></div>
