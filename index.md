@@ -369,13 +369,11 @@ subtitle: "2"
             <li>카페24 API와 Webhook을 활용해 숏폼 콘텐츠와 상품 정보를 자동 연동 및 최신화</li>
             <li>사용량 기반의 계단식 과금 모델을 설계·적용하고, 자동 결제 및 실패 재시도 기능을 개발</li>
             <li>무료 체험기간과 크레딧 제공·차감·만료 기능을 개발하여 요금 체계에 연동</li>
-            <li>영상 업로드 서버와 업로드 시 다양한 화질로 인코딩 되는 파이프라인 개발</li>
           </ul>
           <div style="display: flex; flex-wrap: wrap; gap: 6px;">
             <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#숏폼</span>
             <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#과금 시스템</span>
             <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#크레딧 관리</span>
-            <span style="background: rgba(41, 128, 185, 0.1); color: #2980b9; padding: 3px 8px; border-radius: 4px; font-size: 12px;">#인코딩 파이프라인</span>
           </div>
         </div>
         
