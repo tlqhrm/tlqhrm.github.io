@@ -165,7 +165,6 @@ subtitle: "2"
               <div style="color: #2980b9; font-weight: 600; margin-bottom: 8px;">백엔드</div>
               <div style="line-height: 1.6;">
                 <div>• Node.js (Nest.js, Nuxt.js)</div>
-                <div>• Golang (Gin)</div>
               </div>
             </div>
           </div>
@@ -202,7 +201,6 @@ subtitle: "2"
                 <div>• Naver Cloud Platform</div>
                 <div>• Docker</div>
                 <div>• Kubernetes</div>
-                <div>• Apache Kafka</div>
               </div>
             </div>
           </div>
