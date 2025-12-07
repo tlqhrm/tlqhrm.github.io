@@ -53,7 +53,7 @@ export const companies = [
     experienceGroups: [
       {
         title: 'SaaS 메신저 서비스',
-        description: '유씨웍스(UCWorks)와 스클라인(Schoolline)이라는 SaaS 메신저 서비스의 백엔드를 개발하고 있습니다.',
+        description: '유씨웍스(UCWorks)와 스쿨라인(Schoolline)이라는 SaaS 메신저 서비스의 백엔드를 개발하고 있습니다.',
         projects: [
           {
             name: 'Schoolline',
