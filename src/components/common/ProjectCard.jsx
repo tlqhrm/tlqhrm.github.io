@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import Tag from './Tag'
 import TechStack from './TechStack'
 import ImageGallery from './ImageGallery'
-import { MapIcon, GamepadIcon, GithubIcon } from './Icons'
+import { MapIcon, GamepadIcon, GithubIcon, PlayStoreIcon, RadioIcon } from './Icons'
 
 const iconMap = {
   map: MapIcon,
   gamepad: GamepadIcon,
+  radio: RadioIcon,
 }
 
 export default function ProjectCard({ project, onImageClick }) {
@@ -45,17 +46,30 @@ export default function ProjectCard({ project, onImageClick }) {
 
           <TechStack items={project.techStack} />
 
-          {project.githubUrl && (
-            <div className="mt-3">
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-primary text-sm no-underline hover:underline"
-              >
-                <GithubIcon className="w-4 h-4 mr-1" />
-                GitHub 저장소
-              </a>
+          {(project.githubUrl || project.playStoreUrl) && (
+            <div className="mt-3 flex flex-wrap gap-3">
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-primary text-sm no-underline hover:underline"
+                >
+                  <GithubIcon className="w-4 h-4 mr-1" />
+                  GitHub 저장소
+                </a>
+              )}
+              {project.playStoreUrl && (
+                <a
+                  href={project.playStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-primary text-sm no-underline hover:underline"
+                >
+                  <PlayStoreIcon className="w-4 h-4 mr-1" />
+                  Google Play
+                </a>
+              )}
             </div>
           )}
         </div>

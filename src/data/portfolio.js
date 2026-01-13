@@ -25,11 +25,11 @@ export const profile = {
 
 export const introText = {
   greeting: '안녕하세요!',
-  main: '스타트업에서 근무하며 다양한 서비스를 직접 경험해왔습니다. 서비스의 기획 단계부터 참여해 인프라 구축, DB 설계, 비즈니스 로직 등 백엔드 전반을 책임졌습니다. 작은 조직의 특성상 하나의 역할에 머무르지 않고 서비스 전반을 직접 설계하고 운영하며 빠르게 성장할 수 있었습니다.',
+  main: '현재 메신저 서비스의 백엔드를 담당하고 있습니다. 스타트업에서 기획 단계부터 참여해 인프라 구축, DB 설계, 비즈니스 로직까지 백엔드 전반을 직접 설계하고 운영하며 빠르게 성장해왔습니다.',
   paragraphs: [
-    '새로운 일을 맡으면 부담보다는 배우고 해결할 기회라고 생각합니다. 모르는 영역이라도 스스로 공부해 구현하고, 필요하다면 주 업무가 아니어도 팀에 필요한 일이라면 참여합니다.',
-    '팀 안에서는 혼자 결정하기보다는 제 의견을 적극적으로 공유하고 다른 의견과 조율해 더 나은 방법을 찾으려고 합니다.',
-    '무엇보다 기획 의도를 제대로 파악하고, 사용자가 실제로 어떻게 쓰게 될지 생각하며 기능을 설계합니다. 기능 하나하나가 서비스 전체 흐름에 맞아야 한다고 생각합니다.'
+    '프론트엔드에도 관심이 많아 회사 내 작은 서비스와 개인 프로젝트를 직접 개발해왔습니다. 덕분에 API를 설계할 때 클라이언트 입장에서 어떻게 사용될지 고려하며, 백엔드와 프론트엔드 양쪽 관점을 아우르는 설계를 지향합니다.',
+    '모르는 영역도 직접 공부해서 해결하고, 주 업무가 아니더라도 팀에 필요한 일이라면 적극적으로 참여합니다.',
+    '무엇보다 기획 의도를 정확히 파악하고, 사용자가 실제로 어떻게 쓸지 생각하며 기능을 설계합니다.'
   ]
 }
 
@@ -53,17 +53,18 @@ export const companies = [
     experienceGroups: [
       {
         title: 'SaaS 메신저 서비스',
-        description: '유씨웍스(UCWorks)와 스쿨라인(Schoolline)이라는 SaaS 메신저 서비스의 백엔드를 개발하고 있습니다.',
+        description: '유씨웍스(UCWorks)와 스쿨라인(Schoolline)이라는 SaaS 메신저 서비스의 백엔드를 개발하고 있습니다. MSA 환경에서 실시간 채팅 서비스를 개발 중입니다.',
         projects: [
           {
             name: 'Schoolline',
             subtitle: 'SaaS 기업 및 학교 메신저 서비스',
             period: '2025.09 - 현재',
             tasks: [
-              '메신저 서비스 백엔드 개발'
+              'MSA 환경에서 실시간 채팅 서비스 개발',
+              'Redis와 Nats Pub/Sub을 활용한 실시간 메시지 전송 시스템 구현',
             ],
-            tags: ['SaaS', '메신저', '백엔드'],
-            techStack: ['Node.js', 'Moleculer', 'MariaDB', 'Redis', 'Kubernetes', 'Docker', 'AWS', 'React'],
+            tags: ['SaaS', '메신저', 'MSA', '실시간 통신'],
+            techStack: ['Node.js', 'Moleculer', 'MariaDB', 'Redis', 'Kubernetes', 'Docker', 'AWS', 'React', 'Nats'],
             icon: 'chat'
           }
         ]
@@ -150,6 +151,22 @@ export const companies = [
 ]
 
 export const projects = [
+  {
+    name: '라디오24',
+    subtitle: '인터넷 라디오 스트리밍 앱 / 개인 프로젝트',
+    period: '2025.11 - 2025.12',
+    description: 'React Native를 활용해 개발한 인터넷 라디오 스트리밍 앱입니다.',
+    tasks: [
+      '실시간 라디오 스트리밍 재생 기능 구현',
+      'Cloudflare Workers와 D1을 활용한 서버리스 백엔드 구축',
+      'Google Play Store 출시 및 운영'
+    ],
+    tags: ['개인 프로젝트', 'React Native', '스트리밍', 'Serverless'],
+    techStack: ['React Native', 'Cloudflare Workers', 'Cloudflare D1'],
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.kradio24.app&hl=ko',
+    images: [],
+    icon: 'radio'
+  },
   {
     name: 'TapPlace',
     subtitle: '간편결제 매장 찾기 서비스',
