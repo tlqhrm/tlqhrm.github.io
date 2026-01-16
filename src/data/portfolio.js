@@ -60,8 +60,9 @@ export const companies = [
             subtitle: 'SaaS 기업 및 학교 메신저 서비스',
             period: '2025.09 - 현재',
             tasks: [
-              'MSA 환경에서 실시간 채팅 서비스 개발',
-              'Redis와 Nats Pub/Sub을 활용한 실시간 메시지 전송 시스템 구현',
+              '실시간 채팅 서비스 유지보수',
+                '조직도 및 사용자 관리 기능 개발',
+                '관리자 페이지용 API 개발',
             ],
             tags: ['SaaS', '메신저', 'MSA', '실시간 통신'],
             techStack: ['Node.js', 'Moleculer', 'MariaDB', 'Redis', 'Kubernetes', 'Docker', 'AWS', 'React', 'Nats'],
@@ -137,7 +138,6 @@ export const companies = [
             tasks: [
               '라이브 방송에 필요한 방송 전·후의 비즈니스 로직 유지보수',
               '방송 시작 시 브라우저 Web Push를 통한 유저 알림 기능 개발',
-              '무한스크롤에 필요한 랜덤 플레이리스트 API 구현',
               'OpenAI API를 활용해 매출 정보, 채팅 내역 요약, 사용자 맞춤형 응답을 제공하는 대화형 챗봇 개발'
             ],
             tags: ['라이브 커머스', 'Web Push', '챗봇'],
