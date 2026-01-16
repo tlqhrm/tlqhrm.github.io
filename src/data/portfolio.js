@@ -159,12 +159,13 @@ export const projects = [
     tasks: [
       '실시간 라디오 스트리밍 재생 기능 구현',
       'Cloudflare Workers와 D1을 활용한 서버리스 백엔드 구축',
-      'Google Play Store 출시 및 운영'
+      'Google Play Store 출시 및 운영',
+        '안드로이드 오토 지원'
     ],
     tags: ['개인 프로젝트', 'React Native', '스트리밍', 'Serverless'],
     techStack: ['React Native', 'Cloudflare Workers', 'Cloudflare D1'],
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.kradio24.app&hl=ko',
-    images: [],
+    images: ['/images/radio24-1.webp','/images/radio24-2.webp','/images/radio24-3.webp'],
     icon: 'radio'
   },
   {
