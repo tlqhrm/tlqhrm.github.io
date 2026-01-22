@@ -23,7 +23,25 @@ export default function ProjectCard({ project, onImageClick }) {
               <IconComponent className="w-6 h-6" />
             </div>
             <div>
-              <h6 className="m-0 text-primary text-lg font-semibold">{project.name}</h6>
+              <div className="flex items-center gap-2 flex-wrap">
+                <h6 className="m-0 text-primary text-lg font-semibold">{project.name}</h6>
+                <div className="flex gap-1.5 project-labels">
+                  <span className={`px-2 py-0.5 text-xs font-medium rounded-full ${
+                    project.type === 'personal'
+                      ? 'bg-purple-100 text-purple-700'
+                      : 'bg-blue-100 text-blue-700'
+                  }`}>
+                    {project.type === 'personal' ? '개인' : '팀'}
+                  </span>
+                  <span className={`px-2 py-0.5 text-xs font-medium rounded-full ${
+                    project.status === 'active'
+                      ? 'bg-green-100 text-green-700'
+                      : 'bg-gray-100 text-gray-500'
+                  }`}>
+                    {project.status === 'active' ? '서비스 중' : '종료'}
+                  </span>
+                </div>
+              </div>
               <span className="text-gray-500 text-sm">{project.subtitle} ({project.period})</span>
             </div>
           </div>

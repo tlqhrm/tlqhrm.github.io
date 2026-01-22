@@ -311,6 +311,38 @@
   border-radius: 3px !important;
 }
 
+/* 프로젝트 라벨 (개인/팀, 서비스중/종료) */
+.pdf-mode .project-labels {
+  gap: 4px !important;
+}
+
+.pdf-mode .project-labels span {
+  padding: 1px 6px !important;
+  font-size: 9px !important;
+  border-radius: 10px !important;
+  font-weight: 500 !important;
+}
+
+.pdf-mode .project-labels .bg-purple-100 {
+  background-color: #f3e8ff !important;
+  color: #7c3aed !important;
+}
+
+.pdf-mode .project-labels .bg-blue-100 {
+  background-color: #dbeafe !important;
+  color: #2563eb !important;
+}
+
+.pdf-mode .project-labels .bg-green-100 {
+  background-color: #dcfce7 !important;
+  color: #16a34a !important;
+}
+
+.pdf-mode .project-labels .bg-gray-100 {
+  background-color: #f3f4f6 !important;
+  color: #6b7280 !important;
+}
+
 /* 기술 스택 콤팩트 */
 .pdf-mode .tech-stack {
   margin-top: 6px !important;

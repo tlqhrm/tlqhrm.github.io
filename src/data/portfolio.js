@@ -153,7 +153,9 @@ export const companies = [
 export const projects = [
   {
     name: '라디오24',
-    subtitle: '인터넷 라디오 스트리밍 앱 / 개인 프로젝트',
+    subtitle: '인터넷 라디오 스트리밍 앱',
+    type: 'personal',  // 'personal' | 'team'
+    status: 'active',  // 'active' | 'ended'
     period: '2025.11 - 2025.12',
     description: 'React Native를 활용해 개발한 인터넷 라디오 스트리밍 앱입니다.',
     tasks: [
@@ -171,6 +173,8 @@ export const projects = [
   {
     name: 'TapPlace',
     subtitle: '간편결제 매장 찾기 서비스',
+    type: 'team',
+    status: 'ended',
     period: '2022.06 - 2022.11',
     description: 'ApplePay 국내 정식 도입 전, 미리 ApplePay와 다른 간편결제 사용 가능한 매장을 보여주는 서비스입니다.',
     tasks: [
@@ -188,7 +192,9 @@ export const projects = [
   },
   {
     name: '야매게임',
-    subtitle: '고전 콘솔게임 웹 에뮬레이터 / 개인 프로젝트',
+    subtitle: '고전 콘솔게임 웹 에뮬레이터',
+    type: 'personal',
+    status: 'ended',
     period: '2022.05 - 2022.06',
     description: 'EmulatorJs를 이용해 웹에서 고전 콘솔게임을 실행시키고 세이브 파일을 서버에 저장하고, 불러올 수 있습니다.',
     tasks: [
