@@ -25,19 +25,19 @@ export const profile = {
 
 export const introText = {
   greeting: '안녕하세요!',
-  main: '현재 메신저 서비스의 백엔드를 담당하고 있습니다. 스타트업에서 기획 단계부터 참여해 인프라 구축, DB 설계, 비즈니스 로직까지 백엔드 전반을 직접 설계하고 운영하며 빠르게 성장해왔습니다.',
+  main: '스타트업에서 기획 단계부터 참여해 인프라 구축, DB 설계, 비즈니스 로직까지 백엔드 전반을 직접 설계하고 운영해왔습니다. 현재는 SaaS 메신저와 위치 기반 서비스의 백엔드를 담당하며, Kubernetes 기반 인프라 운영과 배포 관리도 함께 맡고 있습니다.',
   paragraphs: [
-    '프론트엔드에도 관심이 많아 회사 내 작은 서비스와 개인 프로젝트를 직접 개발해왔습니다. 덕분에 API를 설계할 때 클라이언트 입장에서 어떻게 사용될지 고려하며, 백엔드와 프론트엔드 양쪽 관점을 아우르는 설계를 지향합니다.',
-    '모르는 영역도 직접 공부해서 해결하고, 주 업무가 아니더라도 팀에 필요한 일이라면 적극적으로 참여합니다.',
+    '프론트엔드와 앱 개발에도 관심이 있어 회사 내 작은 서비스와 개인 프로젝트를 직접 개발해왔습니다. 덕분에 API를 설계할 때 클라이언트 입장에서 어떻게 사용될지 고려하며, 백엔드와 프론트엔드 양쪽 관점을 아우르는 설계를 지향합니다.',
+    '새로운 영역도 직접 학습해 해결하고, 주 업무가 아니더라도 팀에 필요한 일이라면 적극적으로 참여합니다.',
     '무엇보다 기획 의도를 정확히 파악하고, 사용자가 실제로 어떻게 쓸지 생각하며 기능을 설계합니다.'
   ]
 }
 
 export const skills = {
-  backend: ['Node.js (Nest.js, Moleculer)'],
-  database: ['MySQL', 'PostgreSQL', 'Redis', 'Firestore'],
-  devops: ['AWS', 'Naver Cloud Platform', 'Docker', 'Kubernetes'],
-  frontend: ['React','React Native' ,'Vue']
+  backend: ['Node.js (Nest.js, Moleculer)', 'TypeScript'],
+  database: ['MySQL/MariaDB', 'PostgreSQL', 'Redis', 'Firestore'],
+  devops: ['AWS', 'Naver Cloud Platform', 'Docker', 'Kubernetes', 'Cloudflare'],
+  frontend: ['React', 'React Native']
 }
 
 // 여러 회사 경력을 배열로 관리
@@ -49,23 +49,38 @@ export const companies = [
     isCurrent: true,
     size: '중소기업 (40명 내외)',
     funding: null,
-    mainWork: ['메신저 서비스 백엔드'],
+    mainWork: ['메신저 및 위치 기반 서비스 백엔드'],
     experienceGroups: [
       {
-        title: 'SaaS 메신저 서비스',
-        description: '유씨웍스(UCWorks)와 스쿨라인(Schoolline)이라는 SaaS 메신저 서비스의 백엔드를 개발하고 있습니다. MSA 환경에서 실시간 채팅 서비스를 개발 중입니다.',
+        title: 'SaaS 메신저 및 위치 기반 서비스',
+        description: '스쿨라인(Schoolline), SchoolFence 등 SaaS 서비스의 백엔드를 개발하고 있습니다. MSA 환경에서 실시간 채팅과 위치 기반 서비스를 개발 중입니다.',
         projects: [
           {
             name: 'Schoolline',
-            subtitle: 'SaaS 기업 및 학교 메신저 서비스',
+            subtitle: 'SaaS 학교 메신저 플랫폼',
             period: '2025.09 - 현재',
             tasks: [
-              '실시간 채팅 서비스 유지보수',
-                '조직도 및 사용자 관리 기능 개발',
-                '관리자 페이지용 API 개발',
+              'Socket.IO와 NATS 기반 실시간 채팅 메시지 송수신 및 알림 라우팅 유지보수',
+              '채팅, 쪽지, 알림, 푸시로 이어지는 메시지 전달 흐름 유지보수',
+              '조직도 및 사용자 관리 기능 유지보수 및 개선',
+              '관리자 웹에서 GitLab 이미지 태그를 선택해 특정 서비스에 배포할 수 있는 배포 간소화 기능 개발',
             ],
-            tags: ['SaaS', '메신저', 'MSA', '실시간 통신'],
-            techStack: ['Node.js', 'Moleculer', 'MariaDB', 'Redis', 'Kubernetes', 'Docker', 'AWS', 'React', 'Nats'],
+            tags: ['SaaS 메신저', '실시간 메시징', '배포 간소화', 'K8S 운영'],
+            techStack: ['Node.js', 'Moleculer', 'Socket.IO', 'MariaDB', 'Redis', 'NATS', 'Kubernetes', 'Docker', 'AWS', 'React'],
+            icon: 'chat'
+          },
+          {
+            name: 'SchoolFence',
+            subtitle: '실시간 위치 추적 및 지오펜스 안전 관리 서비스',
+            period: '2026.02 - 현재',
+            tasks: [
+              '그룹 구성원의 현재 위치를 지도에서 확인할 수 있는 실시간 위치 추적 기능 개발',
+              '설정된 목적지를 기준으로 구성원의 도착 및 이탈 여부를 판정하는 기능 구현',
+              '지도에서 영역을 설정하고 구성원의 영역 이탈·복귀를 감지하는 지오펜스 기능 개발',
+              'Socket.IO 이벤트와 FCM 푸시를 연동해 위치 변화, 도착/이탈, 영역 이탈 알림을 실시간 전파',
+            ],
+            tags: ['실시간 위치 추적', '도착/이탈 판정', '지오펜스', '실시간 알림'],
+            techStack: ['Node.js', 'Moleculer', 'Socket.IO', 'MariaDB', 'Prisma', 'Redis', 'Firebase FCM', 'Kubernetes', 'Docker', 'AWS'],
             icon: 'chat'
           }
         ]
@@ -91,13 +106,12 @@ export const companies = [
             period: '2023.04 - 2025.03',
             tasks: [
               '퍼블릭-프라이빗 서브넷 구조를 사용한 인프라 구축',
-              '백엔드 담당자로 주간 회의에 참여하여 신규 기능 기획 및 유지보수 항목을 협의',
               '플레이어에서 사용자 시청 행동을 분석하는 시스템을 개발하고, 데이터를 조합하여 통계로 제공',
               '클라우드 서비스 운영을 위한 보안 컴플라이언스 적용 및 문서 작성',
               'Email, OTP를 활용한 2차 인증 기능 구현'
             ],
             tags: ['미디어 플레이어', '클라우드 서비스', '보안 컴플라이언스', '커뮤니케이션'],
-            techStack: ['Node.js', 'Nuxt.js', 'Go', 'PostgreSql', 'Redis', 'NCP', 'Kafka'],
+            techStack: ['Node.js', 'Nuxt.js', 'Go', 'PostgreSQL', 'Redis', 'NCP', 'Kafka'],
             icon: 'video'
           }
         ]
@@ -152,10 +166,33 @@ export const companies = [
 
 export const projects = [
   {
+    name: 'ImHear',
+    subtitle: '주변 음성 감지 macOS 메뉴바 앱',
+    type: 'personal',  // 'personal' | 'team'
+    status: 'active',  // 'active' | 'ended'
+    vibeCoding: true,
+    period: '2026.04 - 2026.05',
+    description: '주변 사람의 말소리를 감지해 재생 중인 미디어를 자동으로 일시정지하거나 볼륨을 낮춰주는 macOS 메뉴바 앱입니다.',
+    tasks: [
+      'Apple SoundAnalysis와 AVAudioEngine을 활용한 실시간 음성 감지 기능 구현',
+      '음성 감지 시 미디어 자동 일시정지/재개 또는 시스템 볼륨 낮춤 기능 구현',
+      '마이크 선택, 감지 민감도, 볼륨 기준, 자동 재개 시간을 조절할 수 있는 메뉴바 UI 개발',
+      'GitHub Releases 기반 자동 업데이트와 로그인 시 자동 실행 기능 구현',
+      'Swift와 AppKit 기반의 경량 단일 바이너리 앱으로 배포'
+    ],
+    tags: ['개인 프로젝트', 'macOS 앱', '음성 감지', '메뉴바 앱'],
+    techStack: ['Swift', 'AppKit', 'AVFoundation', 'SoundAnalysis', 'CoreAudio'],
+    githubUrl: 'https://github.com/tlqhrm/ImHear',
+    websiteUrl: 'https://tlqhrm.github.io/ImHear/',
+    images: ['/images/imhear-screenshot.png', '/images/imhear-icon.png'],
+    icon: 'mic'
+  },
+  {
     name: '라디오24',
     subtitle: '인터넷 라디오 스트리밍 앱',
     type: 'personal',  // 'personal' | 'team'
     status: 'active',  // 'active' | 'ended'
+    vibeCoding: true,
     period: '2025.11 - 2025.12',
     description: 'React Native를 활용해 개발한 인터넷 라디오 스트리밍 앱입니다.',
     tasks: [

@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import Tag from './Tag'
 import TechStack from './TechStack'
 import ImageGallery from './ImageGallery'
-import { MapIcon, GamepadIcon, GithubIcon, PlayStoreIcon, RadioIcon } from './Icons'
+import { MapIcon, GamepadIcon, GithubIcon, PlayStoreIcon, RadioIcon, MicIcon, ExternalLinkIcon } from './Icons'
 
 const iconMap = {
   map: MapIcon,
   gamepad: GamepadIcon,
   radio: RadioIcon,
+  mic: MicIcon,
 }
 
 export default function ProjectCard({ project, onImageClick }) {
@@ -40,6 +41,11 @@ export default function ProjectCard({ project, onImageClick }) {
                   }`}>
                     {project.status === 'active' ? '서비스 중' : '종료'}
                   </span>
+                  {project.vibeCoding && (
+                    <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-orange-100 text-orange-700">
+                      바이브코딩
+                    </span>
+                  )}
                 </div>
               </div>
               <span className="text-gray-500 text-sm">{project.subtitle} ({project.period})</span>
@@ -64,7 +70,7 @@ export default function ProjectCard({ project, onImageClick }) {
 
           <TechStack items={project.techStack} />
 
-          {(project.githubUrl || project.playStoreUrl) && (
+          {(project.githubUrl || project.playStoreUrl || project.websiteUrl) && (
             <div className="mt-3 flex flex-wrap gap-3">
               {project.githubUrl && (
                 <a
@@ -86,6 +92,17 @@ export default function ProjectCard({ project, onImageClick }) {
                 >
                   <PlayStoreIcon className="w-4 h-4 mr-1" />
                   Google Play
+                </a>
+              )}
+              {project.websiteUrl && (
+                <a
+                  href={project.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-primary text-sm no-underline hover:underline"
+                >
+                  <ExternalLinkIcon className="w-4 h-4 mr-1" />
+                  사이트 보기
                 </a>
               )}
             </div>

@@ -51,7 +51,7 @@ export default function SkillsSection({ onAvatarClick }) {
             />
             <SkillCard
               icon={<BookIcon className="w-5 h-5" />}
-              title="프론트엔드"
+              title="프론트엔드/앱"
               items={skills.frontend}
             />
           </div>
